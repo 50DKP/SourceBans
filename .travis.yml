@@ -18,8 +18,12 @@ before_script:
   - cp game_upload/addons/sourcemod/scripting/sourcebans.sp addons/sourcemod/scripting/
   - cp game_upload/addons/sourcemod/scripting/sourcecomms.sp addons/sourcemod/scripting/
   - cp game_upload/addons/sourcemod/scripting/sbchecker.sp addons/sourcemod/scripting/
+  - cp game_upload/addons/sourcemod/scripting/sb_admins.sp addons/sourcemod/scripting/  
+  - cp game_upload/addons/sourcemod/scripting/sb_bans.sp addons/sourcemod/scripting/
   - cp game_upload/addons/sourcemod/scripting/include/sourcebans.inc addons/sourcemod/scripting/include/
   - cp game_upload/addons/sourcemod/scripting/include/sourcecomms.inc addons/sourcemod/scripting/include/
+  - cp game_upload/addons/sourcemod/scripting/include/sb_admins.inc addons/sourcemod/scripting/include/
+  - cp game_upload/addons/sourcemod/scripting/include/sb_bans.inc addons/sourcemod/scripting/include/
   - cd addons/sourcemod/scripting/
   - wget https://github.com/KyleSanderson/SteamWorks/raw/master/Pawn/includes/SteamWorks.inc -O include/SteamWorks.inc
   - chmod +x spcomp
@@ -29,6 +33,8 @@ script:
   - ./compile.sh sourcebans.sp
   - ./compile.sh sourcecomms.sp
   - ./compile.sh sbchecker.sp
+  - ./compile.sh sb_admins.sp
+  - ./compile.sh sb_bans.sp
 
 after_script:
   - ls compiled/
